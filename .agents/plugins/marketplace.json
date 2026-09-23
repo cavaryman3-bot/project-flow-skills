@@ -1,0 +1,20 @@
+{
+  "name": "project-flow-marketplace",
+  "interface": {
+    "displayName": "Project Flow Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "project-flow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/project-flow"
+      },
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
