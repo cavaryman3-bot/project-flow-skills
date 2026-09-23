@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "project-flow",
+  "version": "0.1.0",
+  "description": "A disciplined requirements-to-review workflow for software projects: clarify, specify, ticket, implement, and review without scope drift.",
+  "license": "MIT",
+  "keywords": ["software-engineering", "requirements", "specification", "tickets", "implementation", "code-review"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Project Flow",
+        "shortDescription": "Requirements -> Spec -> Tickets -> Implement -> Review",
+        "longDescription": "Five reusable skills for turning product decisions into implementation-ready specifications, small tickets, bounded code changes, and evidence-based code reviews.",
+        "developerName": "Project Flow",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": [
+          "Use grill-with-docs to clarify these requirements before implementation.",
+          "Use to-spec to turn the approved requirement into an implementation-ready spec.",
+          "Use to-tickets to split this spec into small verifiable tickets.",
+          "Use implement to execute one approved ticket without scope expansion.",
+          "Use code-review to review the diff against the ticket and governing spec."
+        ],
+        "brandColor": "#0B5D3B"
+      }
+    }
+  }
+}
